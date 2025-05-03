@@ -12,7 +12,7 @@ o scheme precisa estar assim para conectar com o banco
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
-}
+  }
 
 DATABASE_URL é uma variavel salva em .env, DATABASE_URL="mongodb+srv://test:test@cluster0.ns1yp.mongodb.net/myFirstDatabase"
 
@@ -22,7 +22,7 @@ model User {
   email   String   @unique -> o prisma define que cada email precisa ser único
   name    String -> se houvesse um ? na frente, o dado seria opcional
   age     String
-}
+  }
 
 npm install @prisma/client -> instala o client no projeto
 npx prisma generate -> gera os arquivos do client
